@@ -1,0 +1,13 @@
+#!/bin/sh
+# 工作流纪律：commit 必须绑定 STORY 编号 —— 强制「先建卡再提交」
+msg_file="$1"
+first_line=$(head -1 "$msg_file")
+if ! echo "$first_line" | grep -qE 'STORY-[0-9]+'; then
+  echo "" >&2
+  echo "commit-msg 拦截：commit 首行必须包含 STORY 编号" >&2
+  echo "   例：STORY-001: 初始化仓库与流程约定" >&2
+  echo "   先建 Issue：gh issue create --title 'STORY-NNN · ...'" >&2
+  echo "" >&2
+  exit 1
+fi
+exit 0

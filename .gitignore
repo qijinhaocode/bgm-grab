@@ -1,0 +1,9 @@
+node_modules/
+*.log
+.DS_Store
+.env
+*.mp3
+*.part
+*.ytdl
+coverage/
+.workbuddy/

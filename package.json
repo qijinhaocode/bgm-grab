@@ -1,0 +1,30 @@
+{
+  "name": "bgm-grab",
+  "version": "0.1.0",
+  "description": "Clipboard-to-MP3 local workbench for yt-dlp. 给剪辑人的素材入库台。",
+  "type": "module",
+  "bin": {
+    "bgm-grab": "cli.mjs"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:live": "node test/live.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "yt-dlp",
+    "youtube",
+    "audio",
+    "mp3",
+    "download",
+    "local"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qijinhaocode/bgm-grab.git"
+  }
+}
